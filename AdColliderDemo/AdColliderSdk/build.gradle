@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
+
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "2 (beta)"
+        versionCode 2
+        versionName "2.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,3 +33,11 @@ dependencies {
     api 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 
 }
+
+ext {
+    PUBLISH_GROUP_ID = 'com.adcollider'
+    PUBLISH_ARTIFACT_ID = 'sdk'
+    PUBLISH_VERSION = android.defaultConfig.versionName
+}
+
+apply from: "scripts/publish-mavencentral.gradle"
