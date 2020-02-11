@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#890020" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/button_light"
+        android:id="@+id/errorLayout_root">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="48dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="4dp">
+
+            <TextView
+                android:id="@+id/errorLayout_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
